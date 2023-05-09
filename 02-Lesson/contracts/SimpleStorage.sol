@@ -13,7 +13,8 @@ contract SimpleStorage {
 
     mapping (string => uint256) public nameToFavNo;
 
-    function store(uint256 fNo) public {
+    // Here we added virtual because this function is overrided by another function in inherited contract.
+    function store(uint256 fNo) public virtual  {
         favNumber = fNo;
     }
 
